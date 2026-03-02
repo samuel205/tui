@@ -1,8 +1,6 @@
 use ratatui::{
     prelude::*,
-    widgets::{
-        Block, Borders, Clear, Gauge, List, ListItem, Paragraph, Wrap,
-    },
+    widgets::{Block, Borders, Clear, Gauge, List, ListItem, Paragraph, Wrap},
 };
 
 use crate::app::{App, Filter, Mode};
@@ -75,11 +73,7 @@ fn render_todos(frame: &mut Frame, app: &App, area: Rect) {
         items
     };
 
-    let list = List::new(empty_state).block(
-        Block::default()
-            .borders(Borders::ALL)
-            .title("Tareas"),
-    );
+    let list = List::new(empty_state).block(Block::default().borders(Borders::ALL).title("Tareas"));
 
     frame.render_widget(list, area);
 }
